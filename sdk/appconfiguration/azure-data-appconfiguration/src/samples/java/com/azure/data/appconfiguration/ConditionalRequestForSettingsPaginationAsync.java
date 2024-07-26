@@ -30,7 +30,7 @@ public class ConditionalRequestForSettingsPaginationAsync {
      * and the thread is interrupted, either before or during the activity.
      */
     public static void main(String[] args) throws InterruptedException {
-        String connectionString = Configuration.getGlobalConfiguration().get("AZURE_APPCONFIG_CONNECTION_STRING");
+        String connectionString = Configuration.getGlobalConfiguration().get("APPCONFIGURATION_CONNECTION_STRING");
 
         // Instantiate a client that will be used to call the service.
         ConfigurationAsyncClient client = new ConfigurationClientBuilder()

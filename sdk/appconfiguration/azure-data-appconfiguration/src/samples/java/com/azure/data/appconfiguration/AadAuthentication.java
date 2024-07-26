@@ -19,7 +19,7 @@ public class AadAuthentication {
     public static void main(String[] args) {
         // The endpoint can be obtained by going to your App Configuration instance in the Azure portal
         // and navigating to "Overview" page. Looking for the "Endpoint" keyword.
-        String endpoint = "{endpoint_value}";
+        String endpoint = System.getenv("APPCONFIGURATION_ENDPOINT");
 
         // Default token credential could be obtained from Identity service.
         // It tries to create a valid credential in the following order:

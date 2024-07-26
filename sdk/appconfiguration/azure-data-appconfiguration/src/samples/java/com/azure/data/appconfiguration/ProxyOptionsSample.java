@@ -22,10 +22,10 @@ public class ProxyOptionsSample {
     public static void main(String[] args) {
         // The connection string value can be obtained by going to your App Configuration instance in the Azure portal
         // and navigating to "Access Keys" page under the "Settings" section.
-        String connectionString = "endpoint={endpoint_value};id={id_value};secret={secret_value}";
+        String connectionString = System.getenv("APPCONFIGURATION_CONNECTION_STRING");
 
         // Proxy options
-        String hostName = "{your-host-name}";
+        String hostName = "your-host-name";
         int port = 447; // your port number
 
         ProxyOptions proxyOptions = new ProxyOptions(ProxyOptions.Type.HTTP,

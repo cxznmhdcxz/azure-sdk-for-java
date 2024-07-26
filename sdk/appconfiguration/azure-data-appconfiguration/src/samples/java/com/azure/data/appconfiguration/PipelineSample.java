@@ -32,7 +32,7 @@ class PipelineSample {
     public static void main(String[] args) {
         // The connection string value can be obtained by going to your App Configuration instance in the Azure portal
         // and navigating to "Access Keys" page under the "Settings" section.
-        final String connectionString = "endpoint={endpoint_value};id={id_value};name={secret_value}";
+        final String connectionString = System.getenv("APPCONFIGURATION_CONNECTION_STRING");
         final HttpMethodRequestTracker tracker = new HttpMethodRequestTracker();
 
         // Instantiate a client that will be used to call the service.

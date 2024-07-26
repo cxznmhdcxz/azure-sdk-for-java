@@ -27,7 +27,7 @@ public class FeatureFlagConfigurationSettingSampleAsync {
     public static void main(String[] args) throws InterruptedException {
         // The connection string value can be obtained by going to your App Configuration instance in the Azure portal
         // and navigating to "Access Keys" page under the "Settings" section.
-        String connectionString = "endpoint={endpoint_value};id={id_value};secret={secret_value}";
+        String connectionString = System.getenv("APPCONFIGURATION_CONNECTION_STRING");
 
         // Asynchronous sample
         // Instantiate a client that will be used to call the service.

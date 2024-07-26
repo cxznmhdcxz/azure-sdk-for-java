@@ -28,7 +28,7 @@ public class ListSnapshots {
     public static void main(String[] args) {
         // The connection string value can be obtained by going to your App Configuration instance in the Azure portal
         // and navigating to "Access Keys" page under the "Settings" section.
-        String connectionString = Configuration.getGlobalConfiguration().get("AZURE_APPCONFIG_CONNECTION_STRING");
+        String connectionString = Configuration.getGlobalConfiguration().get("APPCONFIGURATION_CONNECTION_STRING");
 
         // Instantiate a client that will be used to call the service.
         final ConfigurationClient client = new ConfigurationClientBuilder()

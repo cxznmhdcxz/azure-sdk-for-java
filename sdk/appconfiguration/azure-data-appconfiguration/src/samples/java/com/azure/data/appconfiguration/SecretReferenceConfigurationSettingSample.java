@@ -21,7 +21,7 @@ public class SecretReferenceConfigurationSettingSample {
     public static void main(String[] args) {
         // The connection string value can be obtained by going to your App Configuration instance in the Azure portal
         // and navigating to "Access Keys" page under the "Settings" section.
-        String connectionString = "endpoint={endpoint_value};id={id_value};secret={secret_value}";
+        String connectionString = System.getenv("APPCONFIGURATION_CONNECTION_STRING");
         final ConfigurationClient client = new ConfigurationClientBuilder()
                                                .connectionString(connectionString)
                                                .buildClient();
