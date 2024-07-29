@@ -23,7 +23,7 @@ import java.util.stream.Stream;
 /**
  * Sample demonstrates how to add a custom policy into the HTTP pipeline.
  */
-class PipelineSample {
+public class PipelineSample {
     /**
      * Runs the sample algorithm and demonstrates how to add a custom policy to the HTTP pipeline.
      *
